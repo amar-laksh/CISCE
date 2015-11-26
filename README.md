@@ -39,13 +39,15 @@ The website just simply provides an open interface to download all the database 
 The following output is just from the different states in India.
 
 ```
-  Total Mails 5182 
-  Google emails:  2417
-  Yahoo emails:  496
-  Hotmail emails:  87
-  Bsnl emails:  21
-  Total emails:  5182
+  Google emails:  954
+  Yahoo emails:  195
+  Hotmail emails:  35
+  Bsnl emails:  11
+  Total emails:  2057
 ```
+** THIS IS ONLY FROM INDIA **
+** NOTE- The new state of Telangana was not included in the count**
+
 # Conclusion
 
 I, personally, would really love to see the website implementing a any kind of control method to let us *NOT DO IT*

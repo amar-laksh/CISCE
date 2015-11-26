@@ -47,21 +47,18 @@ def get_emails(startState,endState):
         x = soup.findAll("div")
         #attrs={"id":"ctl00_ctl00_Cphcontent_Cphleftcontent_rptsearch_ctl00_Div3"})
         y = re.findall(r'<div id=.*?v3.*>(\[.*?\].*?@.*?)</div>',str(x))
-        for i in y:
+        for i in set(y):
             i = i[3:]
             emails.append(i)
     return emails
 
-gm = 0
-ym = 0
-hot = 0
-bsnl = 0
 
 def statistics(this):
-    global gm
-    global ym
-    global hot
-    global bsnl
+    c = 0
+    gm = 0
+    ym = 0
+    hot = 0
+    bsnl = 0
     for i in this:
         if "gmail.com" in i:
             gm = gm + 1
@@ -71,11 +68,12 @@ def statistics(this):
             hot = hot + 1
         elif "bsnl.in" in i:
             bsnl = bsnl + 1
+        c = c + 1
     print "Google emails: ",gm
     print "Yahoo emails: ",ym
     print "Hotmail emails: ",hot
     print "Bsnl emails: ",bsnl
-    print "Total emails: ",len(this)
+    print "Total emails: ",c
     
 
 
@@ -85,11 +83,11 @@ def create_csv(result):
         f = open('emails.csv','a')
         f.write(i+"\n")
         f.close()
-    print "Total Mails",len(result)
 
-for i in range(5,38):
+
+for i in range(5,39):       # Downloading the database webpages
     search_database(2,i)
-    
-result = get_emails(5,38)
+
+result = get_emails(5,39)
 create_csv(result)
 statistics(result)
