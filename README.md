@@ -45,8 +45,9 @@ The following output is just from the different states in India.
   Bsnl emails:  11
   Total emails:  2057
 ```
-** THIS IS ONLY FROM INDIA **
-** NOTE- The new state of Telangana was not included in the count**
+**THIS IS ONLY FROM INDIA**
+
+**NOTE- The new state of Telangana was not included in the count**
 
 # Conclusion
 
